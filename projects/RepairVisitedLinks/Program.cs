@@ -131,7 +131,7 @@ namespace RepairVisitedLinks
                     Console.WriteLine("Attempting to repair @{0}", currentPosition);
 
                     input.Position = currentPosition;
-                    using (var oldEntry = input.ReadToMemoryStream(realLength))
+                    using (var oldEntry = input.ReadToMemoryStream((int)realLength))
                     using (var newEntry = new MemoryStream())
                     {
                         while (oldEntry.Position < oldEntry.Length)
